@@ -8,30 +8,30 @@
 </head>
 <body>
     <header>
-        <h1 class="glow">CYNTHIC</h1>
-        <p>The most trusted mobile Utility provider.</p>
+        <h1 class="title">CYNTHIC</h1>
+        <p class="subtitle">The most trusted mobile Utility provider.</p>
     </header>
-    
-    <nav>
-        <button class="tab" onclick="openTab(event, 'bloxstrap')">Bloxstrap</button>
-        <button class="tab" onclick="openTab(event, 'autoclicker')">Autoclicker</button>
-        <button class="tab" onclick="openTab(event, 'other')">Other</button>
-    </nav>
 
-    <section id="bloxstrap" class="tab-content active">
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab('bloxstrap')">Bloxstrap</button>
+        <button class="tab-button" onclick="showTab('autoclicker')">Autoclicker</button>
+        <button class="tab-button" onclick="showTab('other')">Other</button>
+    </div>
+
+    <div id="bloxstrap" class="tab-content">
         <h2>Bloxstrap</h2>
         <p>A script that attempts to recreate Bloxstrap, so you can use FFlags flawlessly. (Credits to @qwertyui)</p>
-        <div class="code-box">
+        <div class="code-container">
             <pre id="code-snippet">loadstring(game.HttpGet(game, 'https://raw.githubusercontent.com/qwertyui-is-back/Bloxstrap/main/loader.lua', true))()</pre>
             <button onclick="copyToClipboard()">Copy</button>
         </div>
-    </section>
-    
-    <footer>
-        <a href="https://www.youtube.com/@wavezq" target="_blank">YouTube</a>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.youtube.com/@wavezq" target="_blank" class="youtube-link">YouTube</a>
         <a href="https://discord.com/invite/BNAdmKW8Wh" target="_blank">Discord</a>
-    </footer>
-    
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
