@@ -1,34 +1,37 @@
-body {
-    background: linear-gradient(to bottom, #1a1a1a, #000000);
+/* Remove extra space at the bottom */
+body, html {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1a1a1a, black);
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
 }
 
-h1 {
-    font-size: 48px;
-    color: #00bfff;
-    text-shadow: 0 0 10px #00bfff;
+/* Title styles */
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
 }
 
-.glow {
-    animation: pulse 1.5s infinite;
+/* Subtitle */
+.subtitle {
+    font-size: 1.2rem;
+    color: gray;
 }
 
-@keyframes pulse {
-    0% { text-shadow: 0 0 10px #00bfff; }
-    50% { text-shadow: 0 0 20px #00bfff; }
-    100% { text-shadow: 0 0 10px #00bfff; }
-}
-
-nav {
+/* Tab styles */
+.tabs {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
-.tab {
+.tab-button {
     background: #333;
-    color: #00bfff;
+    color: cyan;
     border: none;
     padding: 10px 20px;
     margin: 5px;
@@ -36,38 +39,43 @@ nav {
     border-radius: 5px;
 }
 
-.tab:hover {
-    background: #00bfff;
-    color: black;
+.tab-button.active {
+    background: #0077ff;
+    color: white;
 }
 
-.tab-content {
-    display: none;
+/* Code block styles */
+.code-container {
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+pre {
+    color: lime;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* Copy button */
+button {
+    background: cyan;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Social links */
+.social-links {
     margin-top: 20px;
 }
 
-.active {
-    display: block;
-}
-
-.code-box {
-    background: black;
-    padding: 15px;
-    border-radius: 5px;
-    display: inline-block;
-    text-align: left;
-}
-
-button {
-    background: #00bfff;
-    color: black;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #009acd;
+/* Change YouTube link color to red */
+.youtube-link {
+    color: red;
 }
